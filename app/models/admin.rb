@@ -1,7 +1,7 @@
 class Admin < ActiveRecord::Base
   enum role: %i(full_access restricted_access)
 
-  # scope :with_full_access, -> { where(role: 'full_access') }
+  scope :with_full_access, -> { where(role: 'full_access') }
   # def self.with_full_access
   #   where(role: 'full_access')
   # end
