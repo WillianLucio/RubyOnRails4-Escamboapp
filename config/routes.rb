@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'backoffice', to: 'backoffice/dashboard#index'
   namespace :backoffice do
     resources :categories, except: %i(show destroy)
-    resources :admins, except: %i(show destroy)
+    resources :admins, except: %i(show)
   end
 
   namespace :site do
