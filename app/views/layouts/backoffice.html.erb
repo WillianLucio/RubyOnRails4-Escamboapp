@@ -10,10 +10,10 @@
     <meta name="author" content="">
 
     <title>EscamboApp</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'backoffice', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'backoffice', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'backoffice', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'backoffice' %>
     <%= csrf_meta_tags %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,6 +48,12 @@
   <% if notice %>
     <script type="text/javascript">
       $.notify("<%= notice %>", "success")
+    </script>
+  <% end %>
+
+  <% if alert %>
+    <script type="text/javascript">
+      $.notify("<%= alert %>", "error")
     </script>
   <% end %>
 </body>
