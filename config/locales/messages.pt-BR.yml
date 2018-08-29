@@ -11,3 +11,4 @@ pt-BR:
     created: Item criado com sucesso!
     updated: Item atualizado com sucesso!
     destroyed: Item excluído com sucesso!
+    not_authorized: Você não está autorizado a executar essa ação.
