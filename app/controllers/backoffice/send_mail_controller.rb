@@ -4,6 +4,7 @@ class Backoffice::SendMailController < ApplicationController
   end
 
   def create
-    #code
+    AdminMailer.send_message(current_admin,
+      params[:'recipient-text'], params[:'subject-text'], params[:'message-text']).deliver_now
   end
 end
