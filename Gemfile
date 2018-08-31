@@ -37,6 +37,8 @@ gem 'enum_help'
 gem 'pundit'
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
+# Integration of RubyMoney - Money with Rails
+gem 'money-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
