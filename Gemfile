@@ -35,6 +35,8 @@ gem 'bootstrap_sb_admin_base_v2'
 gem 'enum_help'
 # Minimal authorization through OO design and pure Ruby classes
 gem 'pundit'
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
