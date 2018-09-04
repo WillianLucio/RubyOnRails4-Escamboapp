@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'backoffice', to: 'backoffice/dashboard#index'
   namespace :backoffice do
     resources :categories, except: %i(show destroy)
     resources :admins, except: %i(show)
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
 
     namespace :profile do
       resources :dashboard, only: :index
+      resources :ads, only: :index
     end
   end
 
