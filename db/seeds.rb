@@ -34,3 +34,13 @@ puts 'Cadastrando o ADMINSTRADOR Padrão...'
     role: 0
   )
 puts 'ADMINISTRADOR cadastrado com sucesso!'
+
+######################
+
+puts 'Cadastrando o MEMBRO Padrão...'
+  Member.create!(
+    email: 'membro@membro.com',
+    password: '123456',
+    password_confirmation: '123456'
+  )
+puts 'MEMBRO cadastrado com sucesso!'
