@@ -1,6 +1,6 @@
 <h1>Editando Anúncio</h1>
 
-<%= form_for ([:site, :profile, @ad]) do |f| %>
+<%= form_for([:site, :profile, @ad], html: { multipart: true }) do |f| %>
   <div class="row">
     <div class="col-xs-6">
       <div class="form-group">
@@ -45,7 +45,7 @@
     <div class="col-xs-12">
       <div class="form-group">
         <%= f.label :description %>
-        <%= f.text_area :title, class: 'form-control', rows: 10 %>
+        <%= f.text_area :description, class: 'form-control', rows: 10 %>
       </div>
     </div>
   </div>
