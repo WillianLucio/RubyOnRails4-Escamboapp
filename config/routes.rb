@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :admins, skip: %i(registration)
-  devise_for :members
+  devise_for :members, controllers: { sessions: 'members/sessions' }
   root 'site/home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
