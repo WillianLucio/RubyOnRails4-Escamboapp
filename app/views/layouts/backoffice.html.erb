@@ -44,18 +44,10 @@
   </div>
   <!-- /#wrapper -->
 
-  <% if notice %>
-    <%= javascript_tag "$.notify('#{notice}', 'success')"%>
-  <% end %>
-
-  <% if alert %>
-    <script type="text/javascript">
-      $.notify("<%= alert %>", "error")
-    </script>
-  <% end %>
-
   <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag 'backoffice' %>
+
+  <%= render partial: 'layouts/shared/notifications' %>
 </body>
 
 </html>

@@ -46,7 +46,9 @@ gem 'jquery-ui-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
-  gem 'rails-assets-notifyjs'
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
+  gem 'rails-assets-animate-css'
   gem 'rails-assets-bootbox'
 end
 
