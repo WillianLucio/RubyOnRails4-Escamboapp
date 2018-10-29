@@ -45,6 +45,10 @@ gem 'paperclip', '~> 5.0.0'
 gem 'jquery-ui-rails'
 # The safe Markdown parser, reloaded.
 gem 'redcarpet'
+# Bootstrap plugin for markdown editing
+gem 'rails-assets-bootstrap-markdown'
+# A markdown parser and compiler.
+gem 'rails-assets-marked'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
