@@ -14,6 +14,7 @@ class Ad < ActiveRecord::Base
   # Scopes
   scope :descending_order, ->(quantity = 10) { limit(quantity).order(created_at: :desc) }
   scope :to_the, ->(member) { where(member: member) }
+  scope :where_category, ->(id) { where(category: id) }
 
   # gem money-rails
   monetize :price_cents

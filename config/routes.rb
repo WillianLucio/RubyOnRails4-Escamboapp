@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     end
 
     resources :ad_detail, only: :show
+    resources :categories, only: :show
   end
 
   devise_for :admins, skip: %i(registration)
