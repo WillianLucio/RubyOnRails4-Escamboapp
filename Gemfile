@@ -51,6 +51,8 @@ gem 'rails-assets-bootstrap-markdown'
 gem 'rails-assets-marked'
 # FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord.
 gem 'friendly_id'
+# If Turbolinks are not enough for you. Wiselinks makes your application work faster.
+gem 'wiselinks'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
