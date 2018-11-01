@@ -49,6 +49,8 @@ gem 'redcarpet'
 gem 'rails-assets-bootstrap-markdown'
 # A markdown parser and compiler.
 gem 'rails-assets-marked'
+# FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord.
+gem 'friendly_id'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
