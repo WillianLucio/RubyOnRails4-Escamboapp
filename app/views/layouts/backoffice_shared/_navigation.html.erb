@@ -60,6 +60,13 @@
                     <i class="fa fa-th-list fa-users"></i> Administradores
                   <% end %>
                 </li>
+                <% if Rails.env.development? %>
+                  <li>
+                    <%= link_to backoffice_diagrams_path do %>
+                      <i class="fa fa-th-list fa-database"></i> Diagramas
+                    <% end %>
+                  </li>
+                <% end %>
             </ul>
         </div>
         <!-- /.sidebar-collapse -->
