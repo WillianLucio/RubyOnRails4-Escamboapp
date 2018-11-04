@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">EscamboApp</a>
+        <a class="navbar-brand" href="index.html"><%= t('app.backoffice_subtitle') %></a>
     </div>
     <!-- /.navbar-header -->
 
@@ -47,23 +47,23 @@
                 </li>
                 <li>
                   <%= link_to '' do %>
-                    <i class="fa fa-dashboard fa-fw"></i> Dashboard
+                    <i class="fa fa-dashboard fa-fw"></i> <%= t('backoffice_menu.dashboard') %>
                   <% end %>
                 </li>
                 <li>
                   <%= link_to backoffice_categories_path do %>
-                    <i class="fa fa-th-list fa-fw"></i> Categorias
+                    <i class="fa fa-th-list fa-fw"></i> <%= t('backoffice_menu.categories') %>
                   <% end %>
                 </li>
                 <li>
                   <%= link_to backoffice_admins_path do %>
-                    <i class="fa fa-th-list fa-users"></i> Administradores
+                    <i class="fa fa-th-list fa-users"></i> <%= t('backoffice_menu.admins') %>
                   <% end %>
                 </li>
                 <% if Rails.env.development? %>
                   <li>
                     <%= link_to backoffice_diagrams_path do %>
-                      <i class="fa fa-th-list fa-database"></i> Diagramas
+                      <i class="fa fa-th-list fa-database"></i> <%= t('backoffice_menu.er_diagram') %>
                     <% end %>
                   </li>
                 <% end %>

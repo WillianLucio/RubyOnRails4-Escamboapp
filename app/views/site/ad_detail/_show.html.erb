@@ -12,8 +12,8 @@
 
 <div class="well well-sm">
   <div class="ratings">
-    <p class="pull-right"><%= @ad.comments.count %> comentário</p>
-    <p><%= rating_for @ad, 'quality' %></p>
+    <p class="pull-right"><%= @ad.rates('quality').count %> <%= t('labels.reviews') %></p>
+    <p><%= rating_for @ad, 'quality', star_path: '/images/ratyrate' %></p>
   </div>
 </div>
 
@@ -23,13 +23,13 @@
     <div class="text-right">
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#commentModal">
-        Deixe um comentário
+        <%= t('labels.let_your_comment') %>
       </button>
     </div>
     <hr>
   <% else %>
     <div class="text-right">
-      <%= link_to "Efetue login para comentar", new_member_session_path, class:"btn btn-success" %>
+      <%= link_to "#{t('labels.login_to_comment')}", new_member_session_path, class:"btn btn-success" %>
     </div>
     <hr>
   <% end %>

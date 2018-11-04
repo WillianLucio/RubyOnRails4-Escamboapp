@@ -10,7 +10,7 @@
         <p><%= truncate(ad.description_short, length: 100) %></p>
       </div>
       <div class="ratings" style="padding: 5px;">
-        <p><%= rating_for ad, 'quality' %></p>
+        <p><%= rating_for ad, 'quality', star_path: '/images/ratyrate' %></p>
       </div>
     </div>
   </div>

@@ -1,5 +1,3 @@
-# Aqui ficarão as traduções i18n usados nos botões.
-
 pt-BR:
   buttons:
     new: Novo
@@ -12,3 +10,4 @@ pt-BR:
     close: Fechar
     send: Enviar
     send_message: Enviar Mensagem
+    search: Pesquisar
