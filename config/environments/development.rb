@@ -5,7 +5,7 @@ Rails.application.configure do
   $stdout.sync = true
 
   # Devise config
-  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Mailcatcher
   config.action_mailer.delivery_method = :smtp
