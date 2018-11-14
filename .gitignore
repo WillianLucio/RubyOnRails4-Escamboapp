@@ -16,3 +16,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Database configurations
+config/database.yml
