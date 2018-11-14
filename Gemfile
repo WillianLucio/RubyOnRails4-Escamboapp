@@ -35,8 +35,6 @@ gem 'bootstrap_sb_admin_base_v2'
 gem 'enum_help'
 # Minimal authorization through OO design and pure Ruby classes
 gem 'pundit'
-# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
-gem 'lerolero_generator'
 # Integration of RubyMoney - Money with Rails
 gem 'money-rails'
 # Easy file attachment management for ActiveRecord
@@ -59,6 +57,12 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 # A Ruby Gem that wraps the functionality of jQuery Raty library, and provides optional IMDB style rating.
 gem 'ratyrate'
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
+# Markdown Lorem Ipsum generator
+gem 'doctor_ipsum'
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
@@ -93,10 +97,6 @@ group :development do
   gem 'spring'
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
-  # A library for generating fake data such as names, addresses, and phone numbers.
-  gem 'faker'
-  # Markdown Lorem Ipsum generator
-  gem 'doctor_ipsum'
   # Catches mail and serves it through a dream.
   gem 'mailcatcher'
   # Remote multi-server automation tool
