@@ -99,4 +99,15 @@ group :development do
   gem 'doctor_ipsum'
   # Catches mail and serves it through a dream.
   gem 'mailcatcher'
+  # Remote multi-server automation tool
+  gem 'capistrano', '~> 3.7'
+  # Bundler support for Capistrano 3.x
+  gem 'capistrano-bundler', '~> 1.2'
+  # Official Ruby on Rails specific tasks for Capistrano
+  gem "capistrano-rails", "~> 1.2"
+end
+
+group :production do
+  # MySQL Adapter
+  gem 'mysql2'
 end
