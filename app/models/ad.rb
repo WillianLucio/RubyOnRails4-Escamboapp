@@ -24,7 +24,13 @@ class Ad < ActiveRecord::Base
   scope :to_the, ->(member) { where(member: member) }
   scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
   scope :search, ->(q, page) { where("lower(title) LIKE ?", "%#{q.downcase}%").page(page).per(QTT_PER_PAGE) }
-  scope :random, ->(qtt) { limit(qtt).order("RANDOM()") }
+  scope :random, ->(qtt) {
+    if fRails.env.production?
+      limit(qtt).order("RAND()")   # MySQL
+    else
+      limit(qtt).order("RANDOM()") # SQLite
+    end
+  }
 
   # gem money-rails
   monetize :price_cents
