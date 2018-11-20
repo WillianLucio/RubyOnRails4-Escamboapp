@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181107203029) do
+ActiveRecord::Schema.define(version: 20181120202746) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -103,6 +103,17 @@ ActiveRecord::Schema.define(version: 20181107203029) do
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "ad_id"
+    t.integer  "status",     default: 0
+    t.integer  "buyer_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "orders", ["ad_id"], name: "index_orders_on_ad_id"
+  add_index "orders", ["buyer_id"], name: "index_orders_on_buyer_id"
 
   create_table "overall_averages", force: :cascade do |t|
     t.integer  "rateable_id"

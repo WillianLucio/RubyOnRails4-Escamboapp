@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   get 'backoffice', to: 'backoffice/dashboard#index'
 
+  namespace :checkout do
+    resources :payments, only: :create
+  end
+
   namespace :backoffice do
     resources :categories, except: %i(show destroy)
     resources :admins, except: %i(show)
@@ -31,7 +35,7 @@ Rails.application.routes.draw do
     sessions: 'members/sessions',
     registrations: 'members/registrations'
   }
-  
+
   root 'site/home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
