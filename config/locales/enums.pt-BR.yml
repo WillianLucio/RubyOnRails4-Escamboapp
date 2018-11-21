@@ -16,3 +16,8 @@ pt-BR:
         canceled: Cancelado
         debited: Debitado
         temporary_retention: Retenção temporária
+    ad:
+      status:
+        active: Ativo
+        processing: Processando
+        sold: Vendido

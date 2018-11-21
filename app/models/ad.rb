@@ -1,5 +1,8 @@
 class Ad < ActiveRecord::Base
 
+  # Status
+  enum status: [:active, :processing, :sold]
+
   # Constants
   QTT_PER_PAGE = 6
 

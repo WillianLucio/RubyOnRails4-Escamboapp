@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181120202746) do
+ActiveRecord::Schema.define(version: 20181120220745) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20181120202746) do
     t.date     "finish_date"
     t.text     "description_md"
     t.text     "description_short"
+    t.integer  "status",                           default: 0
   end
 
   add_index "ads", ["category_id"], name: "index_ads_on_category_id"
