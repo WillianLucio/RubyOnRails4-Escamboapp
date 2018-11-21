@@ -9,7 +9,7 @@ class Checkout::PaymentsController < ApplicationController
     payment = PagSeguro::PaymentRequest.new
 
     payment.reference = order.id
-    payment.notification_url = root_url # FIX LATER
+    payment.notification_url = checkout_notifications_url 
     payment.redirect_url = site_ad_detail_url(ad)
 
     payment.items << {

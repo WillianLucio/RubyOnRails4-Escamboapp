@@ -85,7 +85,8 @@ group :development, :test do
   gem 'byebug'
   # Better error page for Rack apps
   gem 'better_errors'
-
+  # Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
+  gem 'rack-cors', require: 'rack/cors'
 end
 
 group :development do

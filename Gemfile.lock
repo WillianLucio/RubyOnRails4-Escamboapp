@@ -202,6 +202,7 @@ GEM
     pundit (2.0.0)
       activesupport (>= 3.0.0)
     rack (1.6.10)
+    rack-cors (1.0.2)
     rack-protection (1.5.5)
       rack
     rack-test (0.6.3)
@@ -359,6 +360,7 @@ DEPENDENCIES
   pagseguro-oficial (~> 2.5.0)
   paperclip (~> 5.0.0)
   pundit
+  rack-cors
   rails (= 4.2.5)
   rails-assets-animate-css!
   rails-assets-bootbox!
