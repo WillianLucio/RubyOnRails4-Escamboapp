@@ -65,6 +65,9 @@ gem 'doctor_ipsum'
 gem 'lerolero_generator'
 # Prawn Handler for Rails. Handles and registers pdf formats.
 gem 'prawn-rails'
+# PDF generator (from HTML) plugin for Ruby on Rails
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
