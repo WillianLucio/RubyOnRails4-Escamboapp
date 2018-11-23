@@ -1,5 +1,7 @@
 class Ad < ActiveRecord::Base
 
+  # Elasticsearch
+  searchkick
   # Constants
   QTT_PER_PAGE = 6
 
@@ -23,7 +25,7 @@ class Ad < ActiveRecord::Base
   scope :descending_order, ->(page) { order(created_at: :desc).page(page).per(QTT_PER_PAGE) }
   scope :to_the, ->(member) { where(member: member) }
   scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
-  scope :search, ->(q, page) { where("lower(title) LIKE ?", "%#{q.downcase}%").page(page).per(QTT_PER_PAGE) }
+  # scope :search, ->(q, page) { where("lower(title) LIKE ?", "%#{q.downcase}%").page(page).per(QTT_PER_PAGE) }
   scope :random, ->(qtt) {
     if Rails.env.production?
       limit(qtt).order("RAND()")   # MySQL
