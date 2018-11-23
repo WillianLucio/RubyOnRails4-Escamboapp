@@ -63,6 +63,8 @@ gem 'faker'
 gem 'doctor_ipsum'
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
+# Simple, efficient background processing for Ruby 
+gem 'sidekiq'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
