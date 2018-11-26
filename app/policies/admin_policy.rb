@@ -1,18 +1,22 @@
 class AdminPolicy < ApplicationPolicy
   def new?
-    user.full_access?
+    # user.full_access?
+    user.has_role? Role::OPTIONS[0]
   end
 
   def edit?
-    user.full_access?
+    # user.full_access?
+    user.has_role? Role::OPTIONS[0]
   end
 
   def destroy?
-    user.full_access?
+    # user.full_access?
+    user.has_role? Role::OPTIONS[0]
   end
 
   def permitted_attributes
-    if user.full_access?
+    # if user.full_access?
+    if user.has_role? Role::OPTIONS[0]
       [:name, :email, :role, :password, :password_confirmation]
     else
       [:name, :email, :password, :password_confirmation]
@@ -21,7 +25,8 @@ class AdminPolicy < ApplicationPolicy
 
   class Scope < Scope
     def resolve
-      if user.full_access?
+      # if user.full_access?
+      if user.has_role? Role::OPTIONS[0]
         scope.all
       else
         scope.with_restricted_access
