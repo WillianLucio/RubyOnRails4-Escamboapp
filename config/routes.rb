@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+
   post '/rate' => 'rater#create', :as => 'rate'
   get 'backoffice', to: 'backoffice/dashboard#index'
 
@@ -31,7 +34,7 @@ Rails.application.routes.draw do
     sessions: 'members/sessions',
     registrations: 'members/registrations'
   }
-  
+
   root 'site/home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
